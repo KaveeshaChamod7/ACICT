@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Loading Screen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="loading-screen">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="content" style="display:ease;">
+        <header>
+            <h1>WELCOME</h1>
+        </header>
+        <p>Fill out the form below to submit student information.</p>
+        
+        <form id="student-form" name="student-form" netlify netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="student-form">
+            <div class="form-group">
+                <label for="name">Student Name:</label>
+                <input type="text" id="name" name="name" placeholder="Kaveesha Chamod" required>
+            </div>
+            <div class="form-group">
+                <label for="grade">Grade:</label>
+                <input type="text" id="grade" name="grade" placeholder="12" required>
+            </div>
+            <div class="form-group">
+                <label for="achievements">Achievements:</label>
+                <textarea id="achievements" name="achievements" rows="4" placeholder="All Island Winner" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="extracurricular">Extracurricular Activities:</label>
+                <textarea id="extracurricular" name="extracurricular" rows="4" placeholder="Football, Member of Leo Club" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        
+    </div>    
+    <section id="student-data-section">
+        <h2>Student Data</h2>
+        <table id="student-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Grade</th>
+                    <th>Achievements</th>
+                    <th>Extracurricular Activities</th>
+                </tr>
+            </thead>
+            <tbody id="student-table-body">
+            </tbody>
+        </table>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
